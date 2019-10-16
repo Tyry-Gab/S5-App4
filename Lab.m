@@ -81,6 +81,15 @@ histogram(k)
 
 
 %% Ex 5
+B = 10;
+x = linspace(1,100,1000);
+F_x = 1/B * exp(-x/B);
+
+
+%x = log(B*y)*-B;
+
+figure
+plot(x, F_x)
 
 
 
