@@ -36,3 +36,21 @@ for n=[100 1000 10000]
 end
 
 %% Ex 3
+
+
+for n=[100 1000 10000]
+    U1 = rand(n,1);
+    U2 = rand(n,1);
+    
+    
+    X = 10 + 2.*cos(2.*pi.*U1).*sqrt(-2.*log(U2));
+    Y = 10 + 2.*cos(2.*pi.*U1 - pi/2).*sqrt(-2.*log(U2));
+    
+    figure
+    hold on
+    histogram(X)
+    histogram(Y)
+end
+
+%% Ex 4
+
