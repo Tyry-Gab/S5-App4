@@ -53,4 +53,45 @@ for n=[100 1000 10000]
 end
 
 %% Ex 4
+N = 1000;
+xn = linspace(-5,0,N);
+xp = linspace(0,5,N);
+
+p = 0.5 * ( 1 + sqrt( 1-exp( -(xp).^2.*sqrt(pi/8) ) ) );
+n = 0.5 * ( 1 - sqrt( 1-exp( -(xn).^2.*sqrt(pi/8) ) ) );
+
+x = [xn xp];
+CDF = [n p];
+
+figure
+plot(x,CDF)
+
+figure
+plot(CDF,x)
+
+rn = rand(N,1);
+rp = rand(N,1);
+
+z = [(sqrt(-log(1-(2*rn-1).^2) / sqrt(pi/8))) -(sqrt(-log(1-(2*rp-1).^2) / sqrt(pi/8)))];
+
+k =z.*2 + 10;
+
+figure
+histogram(k)
+
+
+%% Ex 5
+
+
+
+
+
+
+
+
+
+
+
+
+
 
