@@ -23,4 +23,16 @@ for n=[100 1000 10000]
 end
 
 %% Ex 2
+mu = 10;
+sigma = 2;
 
+for n=[100 1000 10000]
+    r = mu + sigma.*randn(n,1);
+    x_barre = mean(r);
+    s = std(r);
+
+    figure
+    histogram(r)
+end
+
+%% Ex 3
