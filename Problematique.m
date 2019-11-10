@@ -15,8 +15,10 @@ histogram(phi_error)
 
 % Pas mal de la sauce en live
 var_50=4;
-D_error = raylrnd(1:N);
-D_error_50 = (D_error./var_50).*exp(-D_error./(2*var_50));
+x=linspace(0,1,N);
+D_error_50 = raylpdf(x,var_50);
+
+%D_error_50 = (D_error./var_50).*exp(-D_error.^2./(2*var_50));
 
 figure
 histogram(D_error_50)
